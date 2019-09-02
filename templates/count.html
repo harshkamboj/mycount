@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<a href="{% url 'home'%}">Go to HomePage</a>
+<h2>Submitted Text</h2>
+<h4>{{fulltext}}</h4>
+<br>
+<h2>Total words Count</h2>
+<b>Total Words = {{worldlen}}</b>
+<br>
+<h2>Frequency of words</h2>
+<b>
+    {%for word,value in worddict%}
+    {{ word }}={{ value }}
+    <br>
+    <br>
+    {%endfor%}
+</b>
+</body>
+</html>
